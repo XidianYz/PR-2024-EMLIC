@@ -1,7 +1,7 @@
 # Eye-Movement-Prompted Large Image Captioning Model
 This repository contains the reference code for the paper [Eye-Movement-Prompted Large Image Captioning Model](https://www.sciencedirect.com/science/article/pii/S0031320324008483).
 
-![]()
+![](https://github.com/XidianYz/PR-2024-EMLIC/blob/main/framework.jpg)
 
 ## Experiment setup
 please refer to [BLIP2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2).

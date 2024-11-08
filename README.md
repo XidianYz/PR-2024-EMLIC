@@ -26,4 +26,4 @@ By evaluating the pretrained model, you will get
 ```
 
 ## Acknowledgements
-Thanks the outstanding baselines of [BLIP2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2) and [ScanDMM](https://github.com/xiangjieSui/ScanDMM). 
+Thanks the outstanding baselines of [BLIP2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2) and [ScanDMM](https://github.com/xiangjieSui/ScanDMM). # PR-2024-EMLIC

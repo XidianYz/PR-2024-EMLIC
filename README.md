@@ -1,16 +1,24 @@
 # Eye-Movement-Prompted Large Image Captioning Model
 This repository contains the reference code for the paper [Eye-Movement-Prompted Large Image Captioning Model](https://www.sciencedirect.com/science/article/pii/S0031320324008483).
 
+![]()
+
 ## Experiment setup
-please refer to [BLIP2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2)
+please refer to [BLIP2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2).
 
 ## Data preparation
 * Download the Image data and annotation files of MS-COCO.
-* Change the paths of Image data and annotation files in defaults_cap.yaml.
+* Change the paths of Image data and annotation files in:
+```bash
+./lavis/configs/datasets/coco/defaults_cap.yaml
+```
 
-The proposed EMS (Based on [ScanDMM](https://github.com/xiangjieSui/ScanDMM)) generated simulated scanpaths of images according to the image features extracted by ViT-L/14. The pre-trained weights of EMS are saved in model_lr-0.0003_bs-64_epoch-199.pkl.
+The proposed EMS (Based on [ScanDMM](https://github.com/xiangjieSui/ScanDMM)) generated simulated scanpaths of images according to the image features extracted by ViT-L/14. The pre-trained weights of EMS have already been saved in this project.
 
-The pre-trained weights of other components are available here. Acess code: xxxx. Please modify the path of the pre-trained weights in caption_coco_opt2.7b_eval.yaml after downloading.
+The pre-trained weights of other components are available here. Acess code: xxxx. After downloading, please modify the path of the pre-trained weights in:
+```bash
+./lavis/projects/blip2/eval/caption_coco_opt2.7b_eval.yaml
+```
 
 ## Training
 ```python
@@ -26,5 +34,4 @@ By evaluating the pretrained model, you will get
 ```
 
 ## Acknowledgements
-Thanks the outstanding baselines of [BLIP2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2) and [ScanDMM](https://github.com/xiangjieSui/ScanDMM). # PR-2024-EMLIC
-# PR-2024-EMLIC
+Thanks the outstanding baselines of [BLIP2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2) and [ScanDMM](https://github.com/xiangjieSui/ScanDMM).

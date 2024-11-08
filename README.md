@@ -15,7 +15,7 @@ please refer to [BLIP2](https://github.com/salesforce/LAVIS/tree/main/projects/b
 
 The proposed EMS (Based on [ScanDMM](https://github.com/xiangjieSui/ScanDMM)) generated simulated scanpaths of images according to the image features extracted by ViT-L/14. The pre-trained weights of EMS have already been saved in this project.
 
-The pre-trained weights of other components are available here. Acess code: xxxx. After downloading, please modify the path of the pre-trained weights in:
+The pre-trained weights of other components are available [here](https://pan.baidu.com/s/1gbvZLQIVjkkhxQtxjBG3Lg). Acess code: PR24. After downloading, please modify the path of the pre-trained weights in:
 ```bash
 ./lavis/projects/blip2/eval/caption_coco_opt2.7b_eval.yaml
 ```

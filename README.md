@@ -1,21 +1,28 @@
 # Eye-Movement-Prompted Large Image Captioning Model
-This repository contains the reference code for the paper [Eye-Movement-Prompted Large Image Captioning Model](https://www.sciencedirect.com/science/article/pii/S0031320324008483).
+This repository provides the official implementation of the paper [Eye-Movement-Prompted Large Image Captioning Model](https://www.sciencedirect.com/science/article/pii/S0031320324008483).
 
 ![](https://github.com/XidianYz/PR-2024-EMLIC/blob/main/framework.jpg)
 
 ## Experiment setup
-please refer to [BLIP2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2).
+please refer to the [BLIP-2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2).
 
 ## Data preparation
-* Download the Image data and annotation files of MS-COCO.
-* Change the paths of Image data and annotation files in:
+* Download the MS-COCO dataset images and annotation files.
+* Update the paths of Image data and annotation files in:
 ```bash
 ./lavis/configs/datasets/coco/defaults_cap.yaml
 ```
 
-The proposed EMS (Based on [ScanDMM](https://github.com/xiangjieSui/ScanDMM)) generated simulated scanpaths of images according to the image features extracted by ViT-L/14. The pre-trained weights of EMS have already been saved in this project.
+The self-built dataset "Saliency In Captioning" (SIC) are available [here](https://pan.baidu.com/s/1_NxWJZyzLpwotuWZ7x9Drg). Access code: PR24.  SIC contains two types of annotations, stored in the file "SIC_release.pkl":
+```bash
+`['image_name', fixation]`: Fixation coordinates (x, y) (normalized to the range [1024, 768]).
+`['image_name', caption]`: Image descriptions (sourced from the MS-COCO dataset).
+```
+Please use the python library "pickle" to load the label file "SIC_release.pkl".
 
-The pre-trained weights of other components are available [here](https://pan.baidu.com/s/1gbvZLQIVjkkhxQtxjBG3Lg). Acess code: PR24. After downloading, please modify the path of the pre-trained weights in:
+The proposed EMS (Based on [ScanDMM](https://github.com/xiangjieSui/ScanDMM)) generated simulated scanpaths based on image features extracted by ViT-L/14. The pre-trained weights of EMS are included in this repository.
+
+The pre-trained weights for other components are available [here](https://pan.baidu.com/s/1gbvZLQIVjkkhxQtxjBG3Lg). Acess code: PR24. After downloading, please update the model path in:
 ```bash
 ./lavis/projects/blip2/eval/caption_coco_opt2.7b_eval.yaml
 ```
@@ -34,4 +41,4 @@ By evaluating the pretrained model, you will get
 ```
 
 ## Acknowledgements
-Thanks the outstanding baselines of [BLIP2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2) and [ScanDMM](https://github.com/xiangjieSui/ScanDMM).
+We thank the outstanding baselines of [BLIP-2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2) and [ScanDMM](https://github.com/xiangjieSui/ScanDMM).

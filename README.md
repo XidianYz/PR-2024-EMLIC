@@ -24,7 +24,7 @@ The proposed EMS (Based on [ScanDMM](https://github.com/xiangjieSui/ScanDMM)) ge
 
 The pre-trained weights for other components are available [here](https://pan.baidu.com/s/1gbvZLQIVjkkhxQtxjBG3Lg). Acess code: PR24. After downloading, please update the model path in:
 ```bash
-./lavis/projects/blip2/eval/caption_coco_opt2.7b_eval.yaml
+./lavis/configs/models/blip2/blip2_caption_opt2.7b.yaml
 ```
 
 ## Training
